@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  AmazonWebServiceViewer
-//
-//  Created by 小野 純平 on 2019/12/12.
-//  Copyright © 2019 com.swiswiswift.aws-viewer. All rights reserved.
-//
-
 import Cocoa
 import SwiftUI
 

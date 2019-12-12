@@ -14,6 +14,9 @@
 		179CB43323A21737008B0D81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179CB43123A21737008B0D81 /* Main.storyboard */; };
 		179CB43F23A21737008B0D81 /* AmazonWebServiceViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179CB43E23A21737008B0D81 /* AmazonWebServiceViewerTests.swift */; };
 		179CB44A23A21737008B0D81 /* AmazonWebServiceViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179CB44923A21737008B0D81 /* AmazonWebServiceViewerUITests.swift */; };
+		179CB45823A218E9008B0D81 /* S3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179CB45723A218E9008B0D81 /* S3View.swift */; };
+		179CB45B23A220CD008B0D81 /* ServiceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179CB45A23A220CD008B0D81 /* ServiceListViewModel.swift */; };
+		179CB45D23A22126008B0D81 /* ServiceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179CB45C23A22126008B0D81 /* ServiceListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		179CB44523A21737008B0D81 /* AmazonWebServiceViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmazonWebServiceViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		179CB44923A21737008B0D81 /* AmazonWebServiceViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmazonWebServiceViewerUITests.swift; sourceTree = "<group>"; };
 		179CB44B23A21737008B0D81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		179CB45723A218E9008B0D81 /* S3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3View.swift; sourceTree = "<group>"; };
+		179CB45A23A220CD008B0D81 /* ServiceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListViewModel.swift; sourceTree = "<group>"; };
+		179CB45C23A22126008B0D81 /* ServiceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,8 @@
 			children = (
 				179CB42823A21735008B0D81 /* AppDelegate.swift */,
 				179CB42A23A21735008B0D81 /* ContentView.swift */,
+				179CB45923A220B3008B0D81 /* ServiceList */,
+				179CB45723A218E9008B0D81 /* S3View.swift */,
 				179CB42C23A21737008B0D81 /* Assets.xcassets */,
 				179CB43123A21737008B0D81 /* Main.storyboard */,
 				179CB43423A21737008B0D81 /* Info.plist */,
@@ -133,6 +141,15 @@
 				179CB44B23A21737008B0D81 /* Info.plist */,
 			);
 			path = AmazonWebServiceViewerUITests;
+			sourceTree = "<group>";
+		};
+		179CB45923A220B3008B0D81 /* ServiceList */ = {
+			isa = PBXGroup;
+			children = (
+				179CB45A23A220CD008B0D81 /* ServiceListViewModel.swift */,
+				179CB45C23A22126008B0D81 /* ServiceListView.swift */,
+			);
+			path = ServiceList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,8 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				179CB45D23A22126008B0D81 /* ServiceListView.swift in Sources */,
 				179CB42B23A21735008B0D81 /* ContentView.swift in Sources */,
 				179CB42923A21735008B0D81 /* AppDelegate.swift in Sources */,
+				179CB45B23A220CD008B0D81 /* ServiceListViewModel.swift in Sources */,
+				179CB45823A218E9008B0D81 /* S3View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
