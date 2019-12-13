@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1771A48923A385CB0064ED54 /* S3Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771A48823A385CB0064ED54 /* S3Model.swift */; };
+		1771A48D23A387260064ED54 /* Bucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771A48C23A387260064ED54 /* Bucket.swift */; };
 		179CB42923A21735008B0D81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179CB42823A21735008B0D81 /* AppDelegate.swift */; };
 		179CB42B23A21735008B0D81 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179CB42A23A21735008B0D81 /* ContentView.swift */; };
 		179CB42D23A21737008B0D81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179CB42C23A21737008B0D81 /* Assets.xcassets */; };
@@ -17,6 +19,9 @@
 		179CB45823A218E9008B0D81 /* S3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179CB45723A218E9008B0D81 /* S3View.swift */; };
 		179CB45B23A220CD008B0D81 /* ServiceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179CB45A23A220CD008B0D81 /* ServiceListViewModel.swift */; };
 		179CB45D23A22126008B0D81 /* ServiceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179CB45C23A22126008B0D81 /* ServiceListView.swift */; };
+		179CB46023A22827008B0D81 /* S3ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179CB45F23A22827008B0D81 /* S3ViewModel.swift */; };
+		179CB46223A22884008B0D81 /* AWSCommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179CB46123A22884008B0D81 /* AWSCommandHandler.swift */; };
+		179CB46423A22CB9008B0D81 /* ListBucketsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179CB46323A22CB9008B0D81 /* ListBucketsResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1771A48823A385CB0064ED54 /* S3Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3Model.swift; sourceTree = "<group>"; };
+		1771A48C23A387260064ED54 /* Bucket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bucket.swift; sourceTree = "<group>"; };
 		179CB42523A21735008B0D81 /* AmazonWebServiceViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmazonWebServiceViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		179CB42823A21735008B0D81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		179CB42A23A21735008B0D81 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +61,9 @@
 		179CB45723A218E9008B0D81 /* S3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3View.swift; sourceTree = "<group>"; };
 		179CB45A23A220CD008B0D81 /* ServiceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListViewModel.swift; sourceTree = "<group>"; };
 		179CB45C23A22126008B0D81 /* ServiceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListView.swift; sourceTree = "<group>"; };
+		179CB45F23A22827008B0D81 /* S3ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3ViewModel.swift; sourceTree = "<group>"; };
+		179CB46123A22884008B0D81 /* AWSCommandHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSCommandHandler.swift; sourceTree = "<group>"; };
+		179CB46323A22CB9008B0D81 /* ListBucketsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBucketsResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +116,10 @@
 			children = (
 				179CB42823A21735008B0D81 /* AppDelegate.swift */,
 				179CB42A23A21735008B0D81 /* ContentView.swift */,
+				179CB46123A22884008B0D81 /* AWSCommandHandler.swift */,
+				179CB46523A2325A008B0D81 /* Entity */,
 				179CB45923A220B3008B0D81 /* ServiceList */,
-				179CB45723A218E9008B0D81 /* S3View.swift */,
+				179CB45E23A22801008B0D81 /* S3 */,
 				179CB42C23A21737008B0D81 /* Assets.xcassets */,
 				179CB43123A21737008B0D81 /* Main.storyboard */,
 				179CB43423A21737008B0D81 /* Info.plist */,
@@ -150,6 +162,33 @@
 				179CB45C23A22126008B0D81 /* ServiceListView.swift */,
 			);
 			path = ServiceList;
+			sourceTree = "<group>";
+		};
+		179CB45E23A22801008B0D81 /* S3 */ = {
+			isa = PBXGroup;
+			children = (
+				1771A48823A385CB0064ED54 /* S3Model.swift */,
+				179CB45723A218E9008B0D81 /* S3View.swift */,
+				179CB45F23A22827008B0D81 /* S3ViewModel.swift */,
+			);
+			path = S3;
+			sourceTree = "<group>";
+		};
+		179CB46523A2325A008B0D81 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				179CB46623A2335C008B0D81 /* S3 */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		179CB46623A2335C008B0D81 /* S3 */ = {
+			isa = PBXGroup;
+			children = (
+				179CB46323A22CB9008B0D81 /* ListBucketsResponse.swift */,
+				1771A48C23A387260064ED54 /* Bucket.swift */,
+			);
+			path = S3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,8 +323,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				179CB45D23A22126008B0D81 /* ServiceListView.swift in Sources */,
+				179CB46223A22884008B0D81 /* AWSCommandHandler.swift in Sources */,
 				179CB42B23A21735008B0D81 /* ContentView.swift in Sources */,
+				1771A48D23A387260064ED54 /* Bucket.swift in Sources */,
+				179CB46023A22827008B0D81 /* S3ViewModel.swift in Sources */,
+				1771A48923A385CB0064ED54 /* S3Model.swift in Sources */,
 				179CB42923A21735008B0D81 /* AppDelegate.swift in Sources */,
+				179CB46423A22CB9008B0D81 /* ListBucketsResponse.swift in Sources */,
 				179CB45B23A220CD008B0D81 /* ServiceListViewModel.swift in Sources */,
 				179CB45823A218E9008B0D81 /* S3View.swift in Sources */,
 			);
