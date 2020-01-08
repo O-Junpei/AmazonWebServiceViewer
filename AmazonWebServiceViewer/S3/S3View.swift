@@ -9,12 +9,13 @@ struct S3View: View {
         List(viewModel.buckets) { bucket in
             Text(bucket.Name)
                 .onTapGesture {
-                    print(bucket.Name)
                     self.bucket = bucket
                     self.showingAlert = true
             }
         } .alert(isPresented: self.$showingAlert) {
-            Alert(title: Text("リソースの削除"), message: Text("\(bucket.Name)" + "Wear sunscreen"), dismissButton: .default(Text("Got it!")))
+            Alert(title: Text("リソースの削除"), message: Text("\(bucket.Name)を削除しますか？"), primaryButton: .destructive(Text("削除")) {
+                self.viewModel.deleteBucket(name: self.bucket.Name)
+            }, secondaryButton: .cancel())
         }
     }
 }

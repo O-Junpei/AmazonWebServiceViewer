@@ -10,4 +10,9 @@ class S3ViewModel: ObservableObject {
         }
         self.buckets = buckets
     }
+    
+    func deleteBucket(name: String) {
+        print(name)
+        model.deleteBucket(name: name)
+    }
 }

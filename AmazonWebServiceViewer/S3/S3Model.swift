@@ -8,5 +8,10 @@ class S3Model {
              return nil
          }
         return listBucketsResponse
-    }    
+    }
+    
+    func deleteBucket(name: String) {
+        let string = AWSCommandHandler.command(arguments: ["s3api", "delete-bucket", "--bucket", name])
+        print(string)
+    }
 }
